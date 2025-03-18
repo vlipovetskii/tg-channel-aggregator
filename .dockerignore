@@ -1,0 +1,11 @@
+.venv
+.idea/
+*.iml
+session/
+*.zip
+
+.gitignore
+.git/
+*.sh
+LICENSE
+README.md

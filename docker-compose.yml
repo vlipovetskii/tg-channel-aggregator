@@ -1,0 +1,12 @@
+services:
+  tg-channel-aggregator:
+    build: .
+    image: tg-channel-aggregator:latest
+    pull_policy: never
+    container_name: tg-channel-aggregator
+    restart: unless-stopped
+    # --- Use the env_file attribute https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/#use-the-env_file-attribute
+    # The paths to your .env file, specified in the env_file attribute, are relative to the location of your compose.yaml file.
+    env_file: .env
+    volumes:
+      - ./session:/app/session  # Save session file
